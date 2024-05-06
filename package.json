@@ -13,7 +13,8 @@
     "@types/babel-core": "^6.25.10",
     "@types/babel__generator": "^7.6.8",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sass": "^1.76.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.1",

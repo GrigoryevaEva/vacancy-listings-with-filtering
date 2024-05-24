@@ -25,11 +25,15 @@ export const VacancyList = () => {
     }
   }, [allVacancies, dispatch])
 
+  function getImageUrl(name: string) {
+    return new URL(`../../../shared/assets/img/${name}`, import.meta.url).href
+  }
+
   const renderVacancyList = (vacancies: IVacancyDescription[]) => (
     vacancies.map((v) => (
       <div key={v.id} className={`${style.vacancy} ${v.featured ? style.vacancy_featured : ''}`}>
         <div className={style.vacancy__info}>
-          <img src={v.logo} alt="" className={style.vacancy__logo}/>
+          <img src={getImageUrl(v.logo)} alt="" className={style.vacancy__logo}/>
           <div className={style.vacancy__description}>
             <div className={style.vacancy__description_header}>
               <span className={style.vacancy__company}>{v.company}</span>

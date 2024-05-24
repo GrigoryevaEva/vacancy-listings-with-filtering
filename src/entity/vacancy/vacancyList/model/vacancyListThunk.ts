@@ -11,10 +11,9 @@ export const fetchVacancyList = createAsyncThunk<
   IVacancyDescription[],
   IFetchVacancyList,
   { readonly rejectValue: RejectedDataType }
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 >('vacancyList/FetchVacancyList', async ({ currentVacancyList }, thunkAPI) => {
   try {
-    const resp = await getVacancyList()
+    const resp = await getVacancyList(currentVacancyList)
     return resp
   } catch (err: unknown) {
     const error = err as ErrorType

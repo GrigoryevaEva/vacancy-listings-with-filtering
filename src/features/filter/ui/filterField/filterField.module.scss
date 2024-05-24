@@ -1,0 +1,55 @@
+@use '../../../../shared/ui/scss/variables.scss' as v;
+@use '../../../../shared/ui/scss/mixins.scss' as m;
+
+.root {
+  @include m.modal-element;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.188rem;
+
+  position: relative;
+  bottom: 4.25rem;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .filter {
+    display: flex;
+    align-items: center;
+
+    border-radius: v.$brd-r-tag-filter;
+    overflow: hidden;
+
+    &__name {
+      @include m.filter-tag;
+      border-radius: 0;
+      pointer-events: none;
+    }
+
+    &__remove {
+      background-color: v.$bck-c-remove-filter;
+      transition: background-color 0.2s;
+      &:hover {
+        background-color: v.$bck-c-remove-filter-hover;
+      }
+
+      padding: 0.563rem;
+    }
+  }
+
+  .clear {
+    font-size: 1rem;
+    font-weight: bold;
+
+    background-color: #ffffff00;
+    color: v.$c-f-clear-filter;
+    transition: color 0.2s;
+    &:hover {
+      color: v.$c-f-clear-filter-hover;
+    }
+  }
+}

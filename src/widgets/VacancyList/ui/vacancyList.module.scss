@@ -1,0 +1,128 @@
+@use '../../../shared/ui/scss/variables.scss' as v;
+@use '../../../shared/ui/scss/mixins.scss' as m;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.313rem;
+
+  padding-bottom: 3rem;
+  margin-top: 2rem;
+
+  .vacancy {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 1140px) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    position: relative;
+
+    @include m.modal-element;
+
+    &_featured {
+      box-shadow: v.$shdw-inset-featured-vacancy;
+    }
+
+    &__info {
+      border: 1px;
+      border-style: solid;
+      border-color: #ffffff00;
+      border-bottom-color: v.$c-decor;
+      @media (min-width: 1140px) {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        border: none;
+      }
+    }
+
+    &__logo {
+      width: v.$logo-mobile;
+      border-radius: v.$brd-r-logo-company;
+      position: absolute;
+      top: -1.5rem;
+      @media (min-width: 1140px) {
+        position: inherit;
+        width: v.$logo-desktop;
+        height: v.$logo-desktop;
+        // top: 0;
+      }
+    }
+
+    &__description {
+      &_header {
+        display: flex;
+        align-items: center;
+        gap: 2.063rem;
+      }
+
+      display: flex;
+      flex-direction: column;
+      gap: 0.813rem;
+      padding: 0.938rem 0;
+    }
+
+    &__company {
+      font-size: 0.813rem;
+      transition: font-size 0.15s;
+      @media (min-width: 376px) {
+        font-size: 1.125rem;
+      }
+      color: v.$c-f-company-name;
+    }
+
+    &__label {
+      &_container {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      @include m.labels;
+      
+      &_new {
+        background-color: v.$bck-label-new;
+      }
+      &_featured {
+        background-color: v.$bck-label-featured;
+      }
+    }
+
+    &__position {
+      font-size: 0.938rem;
+      transition: font-size 0.15s;
+      @media (min-width: 376px) {
+        font-size: 1.375rem;
+      }
+
+      pointer-events: fill;
+
+      color: v.$c-f-position;
+      transition: color 0.2s;
+      &:hover {
+        color: v.$c-f-position-hover;
+      }
+    }
+
+    &__other {
+      display: flex;
+      gap: 0.375rem;
+
+      font-weight: 500;
+      font-size: 1rem;
+      transition: font-size 0.15s;
+      @media (min-width: 376px) {
+        font-size: 1.125rem;
+      }
+
+      color: v.$c-f-other-info;
+
+      &_dot {
+        color: v.$c-decor;
+      }
+    }
+  }
+}

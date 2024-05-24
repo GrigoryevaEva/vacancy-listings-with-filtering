@@ -1,0 +1,23 @@
+@use '../../../../shared/ui/scss/variables.scss' as v;
+@use '../../../../shared/ui/scss/mixins.scss' as m;
+
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  padding-top: 0.938rem;
+  @media (min-width: 1140px) {
+    padding: 0;
+  }
+
+  .tag {
+    @include m.filter-tag;
+    align-self: center;
+    transition: background-color 0.2s, color 0.2s;
+    &:hover {
+      background-color: v.$bck-c-tag-hover;
+      color: v.$c-f-tag-hover;
+    }
+  }
+}

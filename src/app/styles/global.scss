@@ -1,0 +1,11 @@
+@use '../../shared/ui/scss/variables.scss' as v;
+
+body {
+  font-family: 'League Spartan';
+  font-weight: 700;
+  background-color: v.$bck-c-main;
+
+  span {
+    pointer-events: none;
+  }
+}

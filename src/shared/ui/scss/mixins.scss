@@ -1,0 +1,25 @@
+@use './variables.scss' as v;
+
+@mixin modal-element {
+  width: 80vw;
+  background-color: v.$bck-c-modal-elements;
+  border-radius: v.$brd-r-main;
+  padding: 1.25rem 1.188rem;
+  box-shadow: v.$shdw;
+}
+
+@mixin filter-tag {
+  background-color: v.$bck-c-tag-filter;
+  color: v.$c-f-tag-filter;
+  font-size: v.$f-sz-filter-tag;
+  font-weight: bold;
+  border-radius: v.$brd-r-tag-filter;
+  padding: 0.5rem;
+}
+
+@mixin labels {
+  color: v.$c-f-labels;
+  border-radius: v.$brd-r-labels;
+  padding: 0.313rem 0.5rem;
+  font-size: 0.875rem;
+}

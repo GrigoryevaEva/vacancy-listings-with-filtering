@@ -1,7 +1,7 @@
 import { Header } from '../../../widgets/Header'
 import { VacancyList } from '../../../widgets/VacancyList'
 
-import './homepage.scss'
+import './homePage.scss'
 
 export const HomePage = () => {
   

@@ -6,7 +6,7 @@ import { deleteFilter, resetFilters } from '../../model/filterSlice'
 
 import iconRemoveFilter from '../../../../shared/assets/icon/icon-remove.svg'
 
-import './filterField.scss'
+import style from './filterField.module.scss'
 
 interface IFilterFieldProps {
   filters: string[]
@@ -27,23 +27,23 @@ export const FilterField = (props: IFilterFieldProps) => {
 
   const renderFilters = (filters: string[]) => (
     filters.map((filter) => (
-      <div key={filter}>
-        <div>{filter}</div>
-        <div onClick={() => dispatch(deleteFilter(filter))}>
+      <div className={style.filter} key={filter}>
+        <div className={style.filter__name}>{filter}</div>
+        <button className={style.filter__remove} onClick={() => dispatch(deleteFilter(filter))}>
           <img src={iconRemoveFilter} alt="" />
-        </div>
+        </button>
       </div>
     ))
   )
 
   return (
-    <div className='filterField'>
-      <div>
+    <div className={style.root}>
+      <div className={style.container}>
         {renderFilters(filters)}
       </div>
-      <div onClick={handleResetFilters}>
-        <span>Clear</span>
-      </div>
+      <button className={style.clear} onClick={handleResetFilters}>
+        Clear
+      </button>
     </div>
   )
 }

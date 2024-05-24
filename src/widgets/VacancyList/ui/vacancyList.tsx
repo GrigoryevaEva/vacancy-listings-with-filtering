@@ -5,7 +5,7 @@ import { FilterField, selectFilterError, selectFilterLoading, selectFilters, sel
 import { IVacancyDescription } from '../../../shared/api/vacancy'
 import { useAppDispatch, useAppSelector } from '../../../shared/lib/store'
 
-import './vacancyList.scss'
+import style from './vacancyList.module.scss'
 
 export const VacancyList = () => {
   const dispatch = useAppDispatch()
@@ -27,33 +27,33 @@ export const VacancyList = () => {
 
   const renderVacancyList = (vacancies: IVacancyDescription[]) => (
     vacancies.map((v) => (
-      <div key={v.id}>
-        <div>
-          <div>
-            <img src={v.logo} alt="" />
-          </div>
-          <div>
-            <div>
-              <span>{v.company}</span>
-              {v.new ? <span>NEW!</span> : <></>}
-              {v.featured ? <span>FEATURED</span> : <></>}
+      <div key={v.id} className={`${style.vacancy} ${v.featured ? style.vacancy_featured : ''}`}>
+        <div className={style.vacancy__info}>
+          <img src={v.logo} alt="" className={style.vacancy__logo}/>
+          <div className={style.vacancy__description}>
+            <div className={style.vacancy__description_header}>
+              <span className={style.vacancy__company}>{v.company}</span>
+              {v.new || v.featured 
+                ? <div className={style.vacancy__label_container}>
+                  {v.new ? <span className={`${style.vacancy__label} ${style.vacancy__label_new}`}>NEW!</span> : <></>}
+                  {v.featured ? <span className={`${style.vacancy__label} ${style.vacancy__label_featured}`}>FEATURED</span> : <></>}
+                </div>
+                : <></>}
             </div>
             <div>
-              <span>{v.position}</span>
+              <span className={style.vacancy__position}>{v.position}</span>
             </div>
-            <div>
+            <div className={style.vacancy__other}>
               <span>{v.postedAt}</span>
-              <span>&#8226;</span>
+              <span className={style.vacancy__other_dot}>&#8226;</span>
               <span>{v.contract}</span>
-              <span>&#8226;</span>
+              <span className={style.vacancy__other_dot}>&#8226;</span>
               <span>{v.location}</span>
             </div>
           </div>
         </div>
 
-        <div>
-          <TagsField id={v.id} languages={v.languages} tools={v.tools} />
-        </div>
+        <TagsField id={v.id} languages={v.languages} tools={v.tools} level={v.level} role={v.role} />
       </div>
     ))
   )
@@ -61,7 +61,7 @@ export const VacancyList = () => {
   const content = filters.length === 0 ? allVacancies : filteredVacancies
 
   return (
-    <main>
+    <main className={style.root}>
       {filters.length > 0 
         ? <FilterField filters={filters} /> 
         : <></>}

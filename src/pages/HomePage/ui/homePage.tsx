@@ -1,7 +1,5 @@
-import { Header } from '../../../widgets/Header'
+import { Header } from '../../../shared/ui/Header'
 import { VacancyList } from '../../../widgets/VacancyList'
-
-import './homePage.scss'
 
 export const HomePage = () => {
   

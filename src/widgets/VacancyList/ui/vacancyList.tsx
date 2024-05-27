@@ -1,9 +1,22 @@
 import { useEffect } from 'react'
 
-import { fetchVacancyList, selectVacancyList, selectVacancyListError, selectVacancyListLoading } from '../../../entity/vacancy/vacancyList'
-import { FilterField, selectFilterError, selectFilterLoading, selectFilters, selectResultFilter, TagsField } from '../../../features/filter'
-import { IVacancyDescription } from '../../../shared/api/vacancy'
-import { useAppDispatch, useAppSelector } from '../../../shared/lib/store'
+import { useAppDispatch, useAppSelector } from '@/shared/lib/store'
+import { IVacancyDescription } from '@/shared/api/vacancy'
+
+import { 
+  fetchVacancyList, 
+  selectVacancyList, 
+  selectVacancyListError, 
+  selectVacancyListLoading 
+} from '@/entity/vacancy/vacancyList'
+
+import { 
+  FilterField, 
+  selectFilterError, 
+  selectFilterLoading, 
+  selectFilters, 
+  selectResultFilter, 
+  TagsField } from '@/features/filter'
 
 import style from './vacancyList.module.scss'
 

@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { vacancyListReducer } from "../entity/vacancy/vacancyList";
-import { filterReducer } from "../features/filter";
+import { vacancyListReducer } from "@/entity/vacancy/vacancyList";
+import { filterReducer } from "@/features/filter";
 
 const rootReducer = combineReducers({
   vacancyList: vacancyListReducer,

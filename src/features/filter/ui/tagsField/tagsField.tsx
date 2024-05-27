@@ -1,6 +1,6 @@
-import { useAppDispatch, useAppSelector } from '../../../../shared/lib/store'
-import { addFilter } from '../../model/filterSlice'
-import { selectFilters } from '../../model/selectors'
+import { useAppDispatch, useAppSelector } from '@/shared/lib/store'
+import { addFilter } from '@/features/filter/model/filterSlice'
+import { selectFilters } from '@/features/filter/model/selectors'
 
 import style from './tagsField.module.scss'
 

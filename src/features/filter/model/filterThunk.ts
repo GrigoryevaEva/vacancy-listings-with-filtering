@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 
-import { getResultsFilter, IResultFilter } from '../../../shared/api/filter';
-import { ErrorType, RejectedDataType } from '../../../shared/types';
+import { getResultsFilter, IResultFilter } from '@/shared/api/filter';
+import { ErrorType, RejectedDataType } from '@/shared/types';
 
 interface IFetchFilter {
   readonly filters: string[]

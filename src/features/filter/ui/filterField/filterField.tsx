@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
 
-import { useAppDispatch } from '../../../../shared/lib/store'
-import { fetchFilter } from '../../model/filterThunk'
-import { deleteFilter, resetFilters } from '../../model/filterSlice'
+import { useAppDispatch } from '@/shared/lib/store'
+import { fetchFilter } from '@/features/filter/model/filterThunk'
+import { deleteFilter, resetFilters } from '@/features/filter/model/filterSlice'
 
-import iconRemoveFilter from '../../../../shared/assets/icon/icon-remove.svg'
+import iconRemoveFilter from '@/shared/assets/icon/icon-remove.svg'
 
 import style from './filterField.module.scss'
 

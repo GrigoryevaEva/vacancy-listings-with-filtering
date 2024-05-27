@@ -1,5 +1,5 @@
-import { IResultFilter } from '../../../shared/api/filter'
-import { RejectedDataType } from '../../../shared/types'
+import { IResultFilter } from '@/shared/api/filter'
+import { RejectedDataType } from '@/shared/types'
 
 export interface IFilterState {
   readonly filters: string[]

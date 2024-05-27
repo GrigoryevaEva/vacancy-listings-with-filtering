@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-import { ErrorType, RejectedDataType } from "../../../../shared/types";
-import { getVacancyList, IVacancyDescription } from "../../../../shared/api/vacancy";
+import { ErrorType, RejectedDataType } from "@/shared/types";
+import { getVacancyList, IVacancyDescription } from "@/shared/api/vacancy";
 
 interface IFetchVacancyList {
   readonly currentVacancyList: IVacancyDescription[]

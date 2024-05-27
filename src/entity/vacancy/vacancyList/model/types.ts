@@ -1,5 +1,5 @@
-import { IVacancyDescription } from '../../../../shared/api/vacancy'
-import { RejectedDataType } from '../../../../shared/types'
+import { IVacancyDescription } from '@/shared/api/vacancy'
+import { RejectedDataType } from '@/shared/types'
 
 export interface IVacancyListState {
   readonly vacancies: IVacancyDescription[]

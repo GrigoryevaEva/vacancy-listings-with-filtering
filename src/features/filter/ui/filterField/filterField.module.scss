@@ -1,5 +1,5 @@
-@use '../../../../shared/ui/scss/variables.scss' as v;
-@use '../../../../shared/ui/scss/mixins.scss' as m;
+@use '@/shared/ui/scss/variables.scss' as v;
+@use '@/shared/ui/scss/mixins.scss' as m;
 
 .root {
   @include m.modal-element;

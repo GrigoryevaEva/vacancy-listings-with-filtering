@@ -69,6 +69,7 @@ export const VacancyList = () => {
       {filters.length > 0 
         ? <FilterField filters={filters} /> 
         : <></>}
+
       {content === allVacancies
         ? allVacanciesLoading 
           ? <span>Loading...</span> 

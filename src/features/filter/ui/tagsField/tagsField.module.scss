@@ -19,5 +19,11 @@
       background-color: v.$bck-c-tag-hover;
       color: v.$c-f-tag-hover;
     }
+
+    &_select {
+      background-color: v.$bck-c-tag-hover;
+      color: v.$c-f-tag-hover;
+      transition: background-color 0.2s, color 0.2s;
+    }
   }
 }

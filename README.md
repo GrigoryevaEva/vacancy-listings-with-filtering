@@ -66,7 +66,7 @@ My solution:
 
 The implementation of this project for me is:
 
-1) First, the consolidation of basic knowledge about React Router and Radar Toolkit after the implementation of another project - [countries-listing](https://github.com/GrigoryevaEva/countries-listing)
+1) First, the consolidation of basic knowledge about React Router and Redux Toolkit after the implementation of another project - [countries-listing](https://github.com/GrigoryevaEva/countries-listing)
 
 2) Secondly, the study of TypeScript and FSD architecture, which was completely unfamiliar to me, as well as how the modular system works in SASS
 

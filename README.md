@@ -32,19 +32,18 @@ This is a solution to the [Job listings with filtering challenge on Frontend Men
 ### Screenshot
 
 Design:
-
-<div align="center">
-  <img src='./design/desktop-design.jpg'>
-  <img src='./design/mobile-design.jpg'>
-</div>
+- [Desktop](design/desktop-design.jpg)
+- [Mobile](design/mobile-design.jpg)
 
 My solution:
 
 <div align="center">
   <img src='./screenshots/desktop-without-filters.png'>
   <img src='./screenshots/desktop-with-filters.png'>
-  <img src='./screenshots/mobile-without-filters.png'>
-  <img src='./screenshots/mobile-with-filters.png'>
+  <div style='display: flex;'>
+    <img src='./screenshots/mobile-without-filters.png'>
+    <img src='./screenshots/mobile-with-filters.png'>
+  </div>
 </div>
 
 ### Links

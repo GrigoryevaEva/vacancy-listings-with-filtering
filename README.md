@@ -41,8 +41,8 @@ My solution:
   <img src='./screenshots/desktop-without-filters.png'>
   <img src='./screenshots/desktop-with-filters.png'>
   <div style='display: flex;'>
-    <img src='./screenshots/mobile-without-filters.png'>
-    <img src='./screenshots/mobile-with-filters.png'>
+    <img src='./screenshots/mobile-without-filters.png' width='410px'>
+    <img src='./screenshots/mobile-with-filters.png' width='410px'>
   </div>
 </div>
 
